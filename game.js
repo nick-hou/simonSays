@@ -3,13 +3,7 @@ var gamePattern = [];
 var userClickedPattern = [];
 var gameInProgress = 0;
 var level = 0;
-
-//
-//
-// gamePattern.forEach(element => function() {
-//   animatePress(element);
-//   playSound(element);
-// });
+var highScore = 0;
 
 
 $(".btn").click(function() {
@@ -65,14 +59,15 @@ function startOver() {
 }
 
 function endGame() {
-  $("h1").text("GAME OVER!");
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function() {
     $("body").removeClass("game-over");
   }, 100);
   $("h1").text("Game Over, Press Any Key to Restart");
+  highScore = Math.max(highScore, level-1);
   startOver();
+  $("#high-score").text("Your highest score: " + highScore);
 }
 
 $(document).keypress(function(event) {
