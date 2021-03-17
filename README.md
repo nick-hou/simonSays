@@ -4,7 +4,7 @@
 
 ### The Game
 
-Hosted in (github pages)[https://nick-hou.github.io/simonSays/]
+Hosted in [github pages](https://nick-hou.github.io/simonSays/)
 
 To play the game, press any key to start. On each level N, the button that flashes is the Nth color in the sequence. At each level, you will need to click through the entire sequence.
 
